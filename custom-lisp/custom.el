@@ -19,3 +19,5 @@
  ;; If there is more than one, they won't work right.
  '(region ((t (:background "color-237")))))
 
+;; auto clean whitespace when saving
+(add-hook 'before-save-hook 'whitespace-cleanup)
