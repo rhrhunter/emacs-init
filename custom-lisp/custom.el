@@ -1,9 +1,6 @@
 ;; auto clean whitespace when saving
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
-;; Register the Melpa Emacs Package Repository
-(add-to-list 'package-archives
-             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
 ;; Prevent Emacs from creating backups of files 
 (setq backup-inhibited t)
