@@ -1,5 +1,3 @@
-;; auto clean whitespace when saving
-(add-hook 'before-save-hook 'whitespace-cleanup)
 
 
 ;; Prevent Emacs from creating backups of files 
