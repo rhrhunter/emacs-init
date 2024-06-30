@@ -3,10 +3,6 @@ Custom Init File for Emacs
 
 ## Installation
 ```
-./install.sh
+make install
 ```
 
-## Uninstallation
-```
-./uninstall.sh
-```
