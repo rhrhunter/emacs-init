@@ -18,16 +18,6 @@
 ;; Use 4 spaces when tabbing HTML elements
 (setq-default sgml-basic-offset 4)
 
-;; Disable the *Messages* Buffer
-(setq-default message-log-max nil)
-(kill-buffer "*Messages*")
-
-;; Disable the *Completions* buffer
-(add-hook 'minibuffer-exit-hook 
-          '(lambda ()
-             (let ((buffer "*Completions*"))
-               (and (get-buffer buffer)
-                    (kill-buffer buffer)))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Custom Key Bindings ;;
