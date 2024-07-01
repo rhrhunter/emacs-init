@@ -1,4 +1,3 @@
-
 .PHONY: help install
 
 # Set the default target to 'help'
@@ -7,12 +6,12 @@
 # Get the directory where the Makefile is located
 MAKEFILE_DIR := $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 
-## Display help information about available targets
-help:
+
+help: ## Display help information about available targets
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-## Create symlinks for Emacs configuration files
-install:
+
+install: ## Create symlinks for Emacs configuration files
 	@echo "Creating symlinks for Emacs configuration..."
 	@mkdir -p ~/.emacs.d
 	@ln -sfn $(MAKEFILE_DIR)init.el ~/.emacs.d/init.el
