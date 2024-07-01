@@ -15,5 +15,6 @@ install: ## Create symlinks for Emacs configuration files
 	@echo "Creating symlinks for Emacs configuration..."
 	@mkdir -p ~/.emacs.d
 	@ln -sfn $(MAKEFILE_DIR)init.el ~/.emacs.d/init.el
+	@rm -rf ~/.emacs.d/custom-lisp
 	@ln -sfn $(MAKEFILE_DIR)custom-lisp ~/.emacs.d/custom-lisp
 	@echo "Symlinks created successfully."
