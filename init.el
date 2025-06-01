@@ -11,9 +11,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (markdown-preview-mode markdown-mode web-mode rjsx-mode jsx-mode docker-compose-mode dockerfile-mode yaml-mode vue-mode json-mode)))
- )
+   '(consult docker-compose-mode dockerfile-mode go-mode json-mode
+             jsx-mode magit marginalia markdown-mode
+             markdown-preview-mode rjsx-mode vertico vue-mode web-mode
+             yaml-mode)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -33,3 +34,4 @@
                  ))
     (mapc load-it (directory-files dir nil "\\.el$"))))
 (load-directory "~/.emacs.d/custom-lisp")
+(put 'upcase-region 'disabled nil)
